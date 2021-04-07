@@ -1,0 +1,88 @@
+
+-- Name
+insert into name (id, version, creation_time, update_time, first, last)
+values (1, 0, current_timestamp, current_timestamp, 'Horacio', 'Correia');
+
+insert into name (id, version, creation_time, update_time, first, last)
+values (2, 0, current_timestamp, current_timestamp, 'Fabio', 'Barbosa');
+
+insert into name (id, version, creation_time, update_time, first, last)
+values (3, 0, current_timestamp, current_timestamp, 'Jorge', 'Almeida');
+
+insert into name (id, version, creation_time, update_time, first, last)
+values (4, 0, current_timestamp, current_timestamp, 'Ross', 'Correia');
+
+insert into address (id, version, creation_time, update_time, num, address, parish, town, city, county, state_province, island, region, country, postal_code)
+values (1, 0, current_timestamp, current_timestamp, null, '9436-153rd Street', null, null, 'Edmonton', null, 'Alberta', null, null, 'Canada', 'T5R-1R3');
+
+insert into address (id, version, creation_time, update_time, num, address, parish, town, city, county, state_province, island, region, country, postal_code)
+values (2, 0, current_timestamp, current_timestamp, '63C', 'Rua Doutor Teófilo Braga', 'Sao Jose', null, 'Ponta Delgada', null, null, 'Sao Miguel', 'Azores', 'Portugal', '9500-247');
+
+insert into address (id, version, creation_time, update_time, num, address, parish, town, city, county, state_province, island, region, country, postal_code)
+values (3, 0, current_timestamp, current_timestamp, '19', 'Rua Eng. Hernani Santos', null, 'Vila De Nordeste', null, 'Nordeste', null, 'Sao Miguel', 'Azores', 'Portugal', '9630-202');
+
+insert into address (id, version, creation_time, update_time, num, address, parish, town, city, county, state_province, island, region, country, postal_code)
+values (4, 0, current_timestamp, current_timestamp, '28-2 Esq', 'Rua Das Freiras', 'Matriz', null, 'Ribeira Grande', null, null, 'Sao Miguel', 'Azores', 'Portugal', '9600-534');
+
+insert into email (id, version, creation_time, update_time, email)
+values (1, 0, current_timestamp, current_timestamp, 'rmcorre@gmail.com');
+
+insert into email (id, version, creation_time, update_time, email)
+values (2, 0, current_timestamp, current_timestamp, 'rmcorreUK@gmail.com');
+
+insert into email (id, version, creation_time, update_time, email)
+values (3, 0, current_timestamp, current_timestamp, 'rmcorrePortugal@gmail.com');
+
+insert into phone (id, version, creation_time, update_time, country_code, number)
+values (1, 0, current_timestamp, current_timestamp, '+(001)', '780 761 5099');
+
+insert into phone (id, version, creation_time, update_time, country_code, number)
+values (2, 0, current_timestamp, current_timestamp, '+(351)', '91 421 3861');
+
+insert into contact (id, version, creation_time, update_time, address_id, email_id, phone_id)
+values (1, 0, current_timestamp, current_timestamp, 4, 1, 2 );
+
+insert into contact (id, version, creation_time, update_time, address_id, email_id, phone_id)
+values (2, 0, current_timestamp, current_timestamp, 2, 2, 1 );
+
+insert into identity (id, version, creation_time, update_time, name_id, contact_id)
+values (1, 0, current_timestamp, current_timestamp, 1, 1);
+
+insert into identity (id, version, creation_time, update_time, name_id, contact_id)
+values (2, 0, current_timestamp, current_timestamp, 2, 2);
+
+insert into identity (id, version, creation_time, update_time, name_id, contact_id)
+values (3, 0, current_timestamp, current_timestamp, 4, 1);
+
+insert into profile (id, version, creation_time, update_time, identity_id)
+values ( 2, 0, current_timestamp, current_timestamp, 2);
+
+insert into profile (id, version, creation_time, update_time, identity_id)
+values ( 3, 0, current_timestamp, current_timestamp, 3);
+
+-- insert into level (id, version, creation_time, update_time, label, profile_id)
+-- values ( 1, 0, current_timestamp, current_timestamp, 'Senior', 1 );
+
+insert into summary (id, version, creation_time, update_time, summary, active)
+values ( 1, 0, current_timestamp, current_timestamp, 'I''m a Canadian expat with an adventurous spirit and a curiosity for the unknown. This sense of adventure and desire to explore the unknown has always been a strong motivator in my life, and has led me to some awesome experiences. Now, prepared to embark on a new journey, I''m itching to begin my next great adventure.', true );
+
+insert into summary (id, version, creation_time, update_time, summary, active)
+values ( 2, 0, current_timestamp, current_timestamp, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.', false );
+
+insert into education (id, version, creation_time, update_time, institution, course, start_date, end_date, num, address, parish, town_city, county, state_province,
+island, country_region, postal_code)
+values (1, 0, current_timestamp, current_timestamp, 'Concordia College University', 'Bachelor of Arts', 'Sep 1992', 'May 1995', null, '7128 Ada Blvd NW', null, 'Edmonton', null, 'Alberta', null, 'Canada', 'T5B 4E4');
+
+insert into education (id, version, creation_time, update_time, institution, course, start_date, end_date, num, address, parish, town_city, county, state_province,
+island, country_region, postal_code)
+values (2, 0, current_timestamp, current_timestamp, 'Academia De Codigo', 'Full Stack Developer', 'May 2019', 'Aug 2019', null, 'Rua de Jesus', null, 'Praia de Vitoria', null, null, 'Terceira', 'Azores', '9000-000');
+
+insert into education_group (id, version, creation_time, update_time, group_name)
+values (1, 0, current_timestamp, current_timestamp, 'All');
+
+insert into education_group (id, version, creation_time, update_time, group_name)
+values (2, 0, current_timestamp, current_timestamp, 'Developer');
+
+insert into educationgroup_education (educationgroup_id, education_id) values (1, 1);
+insert into educationgroup_education (educationgroup_id, education_id) values (1, 2);
+insert into educationgroup_education (educationgroup_id, education_id) values (2, 2);
