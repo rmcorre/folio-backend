@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -27,7 +28,15 @@ public class IdentitySvcImpl implements IdentitySvc {
 
     @Override
     public Identity getIdentity(int id) {
-        return identityJpaRepository.getOne(id);
+
+        Optional<Identity> result = identityJpaRepository.findById(id);
+
+        Identity identity = null;
+        if (result.isPresent()) {
+            identity = result.get();
+        }
+
+        return identity;
     }
 
     @Override
