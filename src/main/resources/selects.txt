@@ -17,3 +17,13 @@ FROM contact
 INNER JOIN address ON contact.address_id = address.id
 INNER JOIN email ON contact.email_id = email.id
 INNER JOIN phone ON contact.phone_id = phone.id
+
+
+SELECT
+    role_level.name,
+    role_sub_category.name,
+    role_category.name
+FROM role
+INNER JOIN role_level ON role.role_level_id = role_level.id
+INNER JOIN role_sub_category ON role.role_sub_category_id = role_sub_category.id
+INNER JOIN role_category ON role.role_category_id = role_category.id
