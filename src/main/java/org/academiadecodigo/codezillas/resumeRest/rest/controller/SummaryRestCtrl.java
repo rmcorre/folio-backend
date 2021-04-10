@@ -12,7 +12,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/")
 public class SummaryRestCtrl {
 
     private final SummarySvc summarySvc;
