@@ -82,13 +82,13 @@ insert into role_category (id, version, creation_time, update_time, name)
 values (4, 0, current_timestamp, current_timestamp, 'Professional DJ');
 
 insert into role_sub_category (id, version, creation_time, update_time, name)
-values (1, 0, current_timestamp, current_timestamp, 'Front-end');
+values (1, 0, current_timestamp, current_timestamp, 'Front End');
 
 insert into role_sub_category (id, version, creation_time, update_time, name)
-values (2, 0, current_timestamp, current_timestamp, 'Back-end');
+values (2, 0, current_timestamp, current_timestamp, 'Back End');
 
 insert into role_sub_category (id, version, creation_time, update_time, name)
-values (3, 0, current_timestamp, current_timestamp, 'Full-stack');
+values (3, 0, current_timestamp, current_timestamp, 'Full Stack');
 
 insert into role_sub_category (id, version, creation_time, update_time, name)
 values (4, 0, current_timestamp, current_timestamp, 'House');
@@ -102,11 +102,14 @@ values (6, 0, current_timestamp, current_timestamp, 'Office');
 insert into role (id, version, creation_time, update_time, role_level_id, role_category_id, role_sub_category_id)
 values (1, 0, current_timestamp, current_timestamp, 1, 1, 1);
 
-insert into profile (id, version, creation_time, update_time, identity_id)
-values ( 2, 0, current_timestamp, current_timestamp, 2);
+insert into role (id, version, creation_time, update_time, role_level_id, role_category_id, role_sub_category_id)
+values (2, 0, current_timestamp, current_timestamp, 3, 1, 3);
 
-insert into profile (id, version, creation_time, update_time, identity_id)
-values ( 3, 0, current_timestamp, current_timestamp, 3);
+insert into profile (id, version, creation_time, update_time, identity_id, role_id)
+values ( 1, 0, current_timestamp, current_timestamp, 1, 1);
+
+insert into profile (id, version, creation_time, update_time, identity_id, role_id)
+values ( 2, 0, current_timestamp, current_timestamp, 3, 2);
 
 -- insert into level (id, version, creation_time, update_time, label, profile_id)
 -- values ( 1, 0, current_timestamp, current_timestamp, 'Senior', 1 );
