@@ -3,15 +3,12 @@ package org.academiadecodigo.codezillas.resumeRest.rest.controller;
 import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.Profile;
 import org.academiadecodigo.codezillas.resumeRest.service.profile.ProfileSvc;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/")
 public class ProfileRestController {
 
     private final ProfileSvc profileSvc;
@@ -21,6 +18,7 @@ public class ProfileRestController {
         this.profileSvc = profileSvc;
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/profiles")
     public Set<Profile> getProfiles() {
         return profileSvc.getProfiles();

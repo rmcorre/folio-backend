@@ -30,9 +30,10 @@ INNER JOIN role_category ON role.role_category_id = role_category.id
 
 
 SELECT
-    role_level.name,
-    role_sub_category.name,
-    role_category.name,
+    profile.id AS profile_id,
+    role_level.name AS level,
+    role_sub_category.name AS sub_category,
+    role_category.name AS category,
     name.first,
     name.last,
     address.address,
@@ -48,7 +49,8 @@ SELECT
     address.postal_code,
     email.email,
     phone.country_code,
-    phone.number
+    phone.number,
+    summary.summary,
 FROM profile
 INNER JOIN identity ON identity_id = identity.id
 INNER JOIN role ON role_id = role.id
@@ -60,3 +62,4 @@ INNER JOIN phone ON contact.phone_id = phone.id
 INNER JOIN role_level ON role.role_level_id = role_level.id
 INNER JOIN role_sub_category ON role_sub_category_id = role_sub_category.id
 INNER JOIN role_category ON role_category_id = role_category.id
+INNER JOIN summary ON summary_id = summary.id

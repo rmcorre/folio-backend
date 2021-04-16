@@ -100,25 +100,25 @@ insert into role_sub_category (id, version, creation_time, update_time, name)
 values (6, 0, current_timestamp, current_timestamp, 'Office');
 
 insert into role (id, version, creation_time, update_time, role_level_id, role_category_id, role_sub_category_id)
-values (1, 0, current_timestamp, current_timestamp, 1, 1, 1);
+values (1, 0, current_timestamp, current_timestamp, 3, 1, 1);
 
 insert into role (id, version, creation_time, update_time, role_level_id, role_category_id, role_sub_category_id)
 values (2, 0, current_timestamp, current_timestamp, 3, 1, 3);
-
-insert into profile (id, version, creation_time, update_time, identity_id, role_id)
-values ( 1, 0, current_timestamp, current_timestamp, 1, 1);
-
-insert into profile (id, version, creation_time, update_time, identity_id, role_id)
-values ( 2, 0, current_timestamp, current_timestamp, 3, 2);
-
--- insert into level (id, version, creation_time, update_time, label, profile_id)
--- values ( 1, 0, current_timestamp, current_timestamp, 'Senior', 1 );
 
 insert into summary (id, version, creation_time, update_time, summary, active)
 values ( 1, 0, current_timestamp, current_timestamp, 'I''m a Canadian expat with an adventurous spirit and a curiosity for the unknown. This sense of adventure and desire to explore the unknown has always been a strong motivator in my life, and has led me to some awesome experiences. Now, prepared to embark on a new journey, I''m itching to begin my next great adventure.', true );
 
 insert into summary (id, version, creation_time, update_time, summary, active)
 values ( 2, 0, current_timestamp, current_timestamp, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.', false );
+
+insert into profile (id, version, creation_time, update_time, identity_id, role_id, summary_id)
+values ( 1, 0, current_timestamp, current_timestamp, 1, 2, 1);
+
+insert into profile (id, version, creation_time, update_time, identity_id, role_id, summary_id)
+values ( 2, 0, current_timestamp, current_timestamp, 3, 1, 1);
+
+-- insert into level (id, version, creation_time, update_time, label, profile_id)
+-- values ( 1, 0, current_timestamp, current_timestamp, 'Senior', 1 );
 
 insert into education (id, version, creation_time, update_time, institution, course, start_date, end_date, num, address, parish, town_city, county, state_province,
 island, country_region, postal_code)
