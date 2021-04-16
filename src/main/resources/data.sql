@@ -54,55 +54,55 @@ values (2, 0, current_timestamp, current_timestamp, 2, 2);
 insert into identity (id, version, creation_time, update_time, name_id, contact_id)
 values (3, 0, current_timestamp, current_timestamp, 4, 1);
 
-insert into role_level (id, version, creation_time, update_time, name)
+insert into level (id, version, creation_time, update_time, level_name)
 values (1, 0, current_timestamp, current_timestamp, 'Senior');
 
-insert into role_level (id, version, creation_time, update_time, name)
+insert into level (id, version, creation_time, update_time, level_name)
 values (2, 0, current_timestamp, current_timestamp, 'Intermediate');
 
-insert into role_level (id, version, creation_time, update_time, name)
+insert into level (id, version, creation_time, update_time, level_name)
 values (3, 0, current_timestamp, current_timestamp, 'Junior');
 
-insert into role_level (id, version, creation_time, update_time, name)
+insert into level (id, version, creation_time, update_time, level_name)
 values (4, 0, current_timestamp, current_timestamp, 'Apprentice');
 
-insert into role_level (id, version, creation_time, update_time, name)
+insert into level (id, version, creation_time, update_time, level_name)
 values (5, 0, current_timestamp, current_timestamp, 'Journeyman');
 
-insert into role_category (id, version, creation_time, update_time, name)
+insert into category (id, version, creation_time, update_time, category_name)
 values (1, 0, current_timestamp, current_timestamp, 'Developer');
 
-insert into role_category (id, version, creation_time, update_time, name)
+insert into category (id, version, creation_time, update_time, category_name)
 values (2, 0, current_timestamp, current_timestamp, 'General Manager');
 
-insert into role_category (id, version, creation_time, update_time, name)
+insert into category (id, version, creation_time, update_time, category_name)
 values (3, 0, current_timestamp, current_timestamp, 'Administration');
 
-insert into role_category (id, version, creation_time, update_time, name)
+insert into category (id, version, creation_time, update_time, category_name)
 values (4, 0, current_timestamp, current_timestamp, 'Professional DJ');
 
-insert into role_sub_category (id, version, creation_time, update_time, name)
+insert into sub_category (id, version, creation_time, update_time, sub_category_name)
 values (1, 0, current_timestamp, current_timestamp, 'Front End');
 
-insert into role_sub_category (id, version, creation_time, update_time, name)
+insert into sub_category (id, version, creation_time, update_time, sub_category_name)
 values (2, 0, current_timestamp, current_timestamp, 'Back End');
 
-insert into role_sub_category (id, version, creation_time, update_time, name)
+insert into sub_category (id, version, creation_time, update_time, sub_category_name)
 values (3, 0, current_timestamp, current_timestamp, 'Full Stack');
 
-insert into role_sub_category (id, version, creation_time, update_time, name)
+insert into sub_category (id, version, creation_time, update_time, sub_category_name)
 values (4, 0, current_timestamp, current_timestamp, 'House');
 
-insert into role_sub_category (id, version, creation_time, update_time, name)
+insert into sub_category (id, version, creation_time, update_time, sub_category_name)
 values (5, 0, current_timestamp, current_timestamp, 'Techno');
 
-insert into role_sub_category (id, version, creation_time, update_time, name)
+insert into sub_category (id, version, creation_time, update_time, sub_category_name)
 values (6, 0, current_timestamp, current_timestamp, 'Office');
 
-insert into role (id, version, creation_time, update_time, role_level_id, role_category_id, role_sub_category_id)
+insert into role (id, version, creation_time, update_time, level_id, category_id, sub_category_id)
 values (1, 0, current_timestamp, current_timestamp, 3, 1, 1);
 
-insert into role (id, version, creation_time, update_time, role_level_id, role_category_id, role_sub_category_id)
+insert into role (id, version, creation_time, update_time, level_id, category_id, sub_category_id)
 values (2, 0, current_timestamp, current_timestamp, 3, 1, 3);
 
 insert into summary (id, version, creation_time, update_time, summary, active)

@@ -1,7 +1,7 @@
 package org.academiadecodigo.codezillas.resumeRest;
 
-import org.academiadecodigo.codezillas.resumeRest.repository.IdentityJpaRepository;
-import org.academiadecodigo.codezillas.resumeRest.service.identity.IdentitySvc;
+import org.academiadecodigo.codezillas.resumeRest.repository.profile.IdentityJpaRepository;
+import org.academiadecodigo.codezillas.resumeRest.service.profile.identity.IdentitySvc;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

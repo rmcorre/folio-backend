@@ -1,9 +1,9 @@
 package org.academiadecodigo.codezillas.resumeRest.domainModel.profile;
 
 import org.academiadecodigo.codezillas.resumeRest.domainModel.AbstractModel;
-import org.academiadecodigo.codezillas.resumeRest.domainModel.identity.Identity;
-import org.academiadecodigo.codezillas.resumeRest.domainModel.role.Role;
-import org.academiadecodigo.codezillas.resumeRest.domainModel.summary.Summary;
+import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.identity.Identity;
+import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.role.Role;
+import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.summary.Summary;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
