@@ -1,7 +1,7 @@
 package org.academiadecodigo.codezillas.resumeRest.domainModel.profile;
 
 import org.academiadecodigo.codezillas.resumeRest.domainModel.AbstractModel;
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.concept.Concept;
+import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.concept.ConceptGroup;
 import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.identity.Identity;
 import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.role.Role;
 import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.summary.Summary;
@@ -37,10 +37,10 @@ public class Profile extends AbstractModel {
 
     @ManyToOne(
             optional = false,
-            fetch = FetchType.LAZY,
+            fetch = FetchType.EAGER,
             cascade = CascadeType.ALL
     )
-    private Concept concept;
+    private ConceptGroup conceptGroup;
 
     public Identity getIdentity() {
         return identity;
@@ -66,12 +66,12 @@ public class Profile extends AbstractModel {
         this.summary = summary;
     }
 
-    public Concept getConcept() {
-        return concept;
+    public ConceptGroup getConceptGroup() {
+        return conceptGroup;
     }
 
-    public void setConcept(Concept concept) {
-        this.concept = concept;
+    public void setConceptGroup(ConceptGroup conceptGroup) {
+        this.conceptGroup = conceptGroup;
     }
 
     @Override
@@ -80,7 +80,7 @@ public class Profile extends AbstractModel {
                 "identity=" + identity +
                 ", role=" + role +
                 ", summary=" + summary +
-                ", concept=" + concept +
+                ", conceptGroup=" + conceptGroup +
                 "} " + super.toString();
     }
 }

@@ -111,11 +111,30 @@ values ( 1, 0, current_timestamp, current_timestamp, 'I''m a Canadian expat with
 insert into summary (id, version, creation_time, update_time, summary, active)
 values ( 2, 0, current_timestamp, current_timestamp, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.', false );
 
-insert into profile (id, version, creation_time, update_time, identity_id, role_id, summary_id)
-values ( 1, 0, current_timestamp, current_timestamp, 1, 2, 1);
+insert into concept_group (id, version, creation_time, update_time, concept_group_name)
+values (1, 0, current_timestamp, current_timestamp, 'Software Development' );
 
-insert into profile (id, version, creation_time, update_time, identity_id, role_id, summary_id)
-values ( 2, 0, current_timestamp, current_timestamp, 3, 1, 1);
+insert into concept (id, version, creation_time, update_time, term, concept_group_id)
+values (1, 0, current_timestamp, current_timestamp, 'OOP Principles', 1);
+values (1, 0, current_timestamp, current_timestamp, 'OOP Principles', 1);
+
+insert into concept (id, version, creation_time, update_time, term, concept_group_id)
+values (2, 0, current_timestamp, current_timestamp, 'Domain Modeling', 1);
+
+insert into concept (id, version, creation_time, update_time, term, concept_group_id)
+values (3, 0, current_timestamp, current_timestamp, 'RDBMS Design', 1);
+
+insert into concept (id, version, creation_time, update_time, term, concept_group_id)
+values (4, 0, current_timestamp, current_timestamp, 'Design Patterns', 1);
+
+insert into concept (id, version, creation_time, update_time, term, concept_group_id)
+values (5, 0, current_timestamp, current_timestamp, 'Software Architecture', 1);
+
+insert into profile (id, version, creation_time, update_time, identity_id, role_id, summary_id, concept_group_id)
+values ( 1, 0, current_timestamp, current_timestamp, 1, 2, 1, 1);
+
+insert into profile (id, version, creation_time, update_time, identity_id, role_id, summary_id, concept_group_id)
+values ( 2, 0, current_timestamp, current_timestamp, 3, 1, 1, 1);
 
 -- insert into level (id, version, creation_time, update_time, label, profile_id)
 -- values ( 1, 0, current_timestamp, current_timestamp, 'Senior', 1 );
