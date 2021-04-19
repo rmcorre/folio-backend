@@ -5,6 +5,7 @@ import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.concept.Co
 import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.identity.Identity;
 import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.role.Role;
 import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.summary.Summary;
+import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.tool.ToolGroup;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -37,10 +38,17 @@ public class Profile extends AbstractModel {
 
     @ManyToOne(
             optional = false,
-            fetch = FetchType.EAGER,
+            fetch = FetchType.LAZY,
             cascade = CascadeType.ALL
     )
     private ConceptGroup conceptGroup;
+
+    @ManyToOne(
+            optional = false,
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL
+    )
+    private ToolGroup toolGroup;
 
     public Identity getIdentity() {
         return identity;
@@ -74,6 +82,14 @@ public class Profile extends AbstractModel {
         this.conceptGroup = conceptGroup;
     }
 
+    public ToolGroup getToolGroup() {
+        return toolGroup;
+    }
+
+    public void setToolGroup(ToolGroup toolGroup) {
+        this.toolGroup = toolGroup;
+    }
+
     @Override
     public String toString() {
         return "Profile{" +
@@ -81,6 +97,7 @@ public class Profile extends AbstractModel {
                 ", role=" + role +
                 ", summary=" + summary +
                 ", conceptGroup=" + conceptGroup +
+                ", toolGroup=" + toolGroup +
                 "} " + super.toString();
     }
 }
