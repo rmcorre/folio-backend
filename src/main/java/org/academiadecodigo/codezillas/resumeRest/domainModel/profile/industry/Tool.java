@@ -1,4 +1,4 @@
-package org.academiadecodigo.codezillas.resumeRest.domainModel.profile.tool;
+package org.academiadecodigo.codezillas.resumeRest.domainModel.profile.industry;
 
 import org.academiadecodigo.codezillas.resumeRest.domainModel.AbstractModel;
 
