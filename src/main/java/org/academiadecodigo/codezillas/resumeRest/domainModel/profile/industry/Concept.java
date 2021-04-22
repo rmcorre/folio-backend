@@ -1,11 +1,8 @@
-package org.academiadecodigo.codezillas.resumeRest.domainModel.profile.concept;
+package org.academiadecodigo.codezillas.resumeRest.domainModel.profile.industry;
 
 import org.academiadecodigo.codezillas.resumeRest.domainModel.AbstractModel;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Concept extends AbstractModel {
