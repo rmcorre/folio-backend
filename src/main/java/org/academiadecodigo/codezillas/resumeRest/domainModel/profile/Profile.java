@@ -1,11 +1,12 @@
 package org.academiadecodigo.codezillas.resumeRest.domainModel.profile;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import org.academiadecodigo.codezillas.resumeRest.domainModel.AbstractModel;
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.concept.ConceptGroup;
 import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.identity.Identity;
+import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.industry.Industry;
 import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.role.Role;
 import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.summary.Summary;
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.tool.ToolGroup;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -13,6 +14,7 @@ import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 
 @Entity
+@JsonIdentityInfo(generator = ObjectIdGenerators.UUIDGenerator.class)
 public class Profile extends AbstractModel {
 
     @ManyToOne(
@@ -41,14 +43,7 @@ public class Profile extends AbstractModel {
             fetch = FetchType.LAZY,
             cascade = CascadeType.ALL
     )
-    private ConceptGroup conceptGroup;
-
-    @ManyToOne(
-            optional = false,
-            fetch = FetchType.LAZY,
-            cascade = CascadeType.ALL
-    )
-    private ToolGroup toolGroup;
+    private Industry industry;
 
     public Identity getIdentity() {
         return identity;
@@ -74,20 +69,12 @@ public class Profile extends AbstractModel {
         this.summary = summary;
     }
 
-    public ConceptGroup getConceptGroup() {
-        return conceptGroup;
+    public Industry getIndustry() {
+        return industry;
     }
 
-    public void setConceptGroup(ConceptGroup conceptGroup) {
-        this.conceptGroup = conceptGroup;
-    }
-
-    public ToolGroup getToolGroup() {
-        return toolGroup;
-    }
-
-    public void setToolGroup(ToolGroup toolGroup) {
-        this.toolGroup = toolGroup;
+    public void setIndustry(Industry industry) {
+        this.industry = industry;
     }
 
     @Override
@@ -96,8 +83,7 @@ public class Profile extends AbstractModel {
                 "identity=" + identity +
                 ", role=" + role +
                 ", summary=" + summary +
-                ", conceptGroup=" + conceptGroup +
-                ", toolGroup=" + toolGroup +
+                ", industry=" + industry +
                 "} " + super.toString();
     }
 }
