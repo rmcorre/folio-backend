@@ -7,20 +7,20 @@ import javax.persistence.Entity;
 @Entity
 public class Concept extends AbstractModel {
 
-    private String term;
+    private String conceptName;
 
-    public String getTerm() {
-        return term;
+    public String getConceptName() {
+        return conceptName;
     }
 
-    public void setTerm(String term) {
-        this.term = term;
+    public void setConceptName(String term) {
+        this.conceptName = term;
     }
 
     @Override
     public String toString() {
         return "Concept{" +
-                "term='" + term + '\'' +
+                "term='" + conceptName + '\'' +
                 "} " + super.toString();
     }
 }
