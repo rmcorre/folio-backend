@@ -1,8 +1,6 @@
 package org.academiadecodigo.codezillas.resumeRest.domainModel.profile.industry;
 
 import org.academiadecodigo.codezillas.resumeRest.domainModel.AbstractModel;
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -14,27 +12,27 @@ public class Industry extends AbstractModel {
     private String name;
 
     @OneToMany(
+            fetch = FetchType.LAZY,
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
     @JoinColumn(name = "industry_id")
-    @LazyCollection(LazyCollectionOption.FALSE)
     List<Concept> conceptList = new ArrayList<>();
 
     @OneToMany(
+            fetch = FetchType.LAZY,
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
     @JoinColumn(name = "industry_id")
-    @LazyCollection(LazyCollectionOption.FALSE)
     List<Tech> techList = new ArrayList<>();
 
     @OneToMany(
+            fetch = FetchType.LAZY,
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
     @JoinColumn(name = "industry_id")
-    @LazyCollection(LazyCollectionOption.FALSE)
     List<Tool> toolList = new ArrayList<>();
 
     public String getName() {
