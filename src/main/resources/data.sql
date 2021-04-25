@@ -120,19 +120,19 @@ insert into concept (id, version, creation_time, update_time, concept_name, indu
 values (1, 0, current_timestamp, current_timestamp, 'OOP', 1);
 
 insert into concept (id, version, creation_time, update_time, concept_name, industry_id)
-values (2, 0, current_timestamp, current_timestamp, 'Domain Modeling', 1);
+values (2, 0, current_timestamp, current_timestamp, 'Modeling', 1);
 
 insert into concept (id, version, creation_time, update_time, concept_name, industry_id)
-values (3, 0, current_timestamp, current_timestamp, 'RDBMS Design', 1);
+values (3, 0, current_timestamp, current_timestamp, 'RDBMS', 1);
 
 insert into concept (id, version, creation_time, update_time, concept_name, industry_id)
-values (4, 0, current_timestamp, current_timestamp, 'Design Patterns', 1);
+values (4, 0, current_timestamp, current_timestamp, 'Patterns', 1);
 
 insert into concept (id, version, creation_time, update_time, concept_name, industry_id)
-values (5, 0, current_timestamp, current_timestamp, 'Software Architecture', 1);
+values (5, 0, current_timestamp, current_timestamp, 'REST', 1);
 
 insert into concept (id, version, creation_time, update_time, concept_name, industry_id)
-values (6, 0, current_timestamp, current_timestamp, 'REST', 1);
+values (6, 0, current_timestamp, current_timestamp, 'Architecture', 1);
 
 insert into tool (id, version, creation_time, update_time, tool_name, industry_id)
 values (1, 0, current_timestamp, current_timestamp, 'Git', 1);
@@ -141,10 +141,16 @@ insert into tool (id, version, creation_time, update_time, tool_name, industry_i
 values (2, 0, current_timestamp, current_timestamp, 'Webpack', 1);
 
 insert into tool (id, version, creation_time, update_time, tool_name, industry_id)
-values (3, 0, current_timestamp, current_timestamp, 'Visual Paradigm', 1);
+values (3, 0, current_timestamp, current_timestamp, 'NPM', 1);
 
 insert into tool (id, version, creation_time, update_time, tool_name, industry_id)
 values (4, 0, current_timestamp, current_timestamp, 'IntelliJ', 1);
+
+insert into tool (id, version, creation_time, update_time, tool_name, industry_id)
+values (5, 0, current_timestamp, current_timestamp, 'VSCode', 1);
+
+insert into tool (id, version, creation_time, update_time, tool_name, industry_id)
+values (6, 0, current_timestamp, current_timestamp, 'Chrome', 1);
 
 insert into tech (id, version, creation_time, update_time, tech_name, industry_id)
 values (1, 0, current_timestamp, current_timestamp, 'Java', 1);
@@ -159,14 +165,61 @@ insert into tech (id, version, creation_time, update_time, tech_name, industry_i
 values (4, 0, current_timestamp, current_timestamp, 'CSS3', 1);
 
 insert into tech (id, version, creation_time, update_time, tech_name, industry_id)
-values (5, 0, current_timestamp, current_timestamp, 'SQL/MySQL', 1);
+values (5, 0, current_timestamp, current_timestamp, 'SQL', 1);
 
+insert into framework_or_library (id, version, creation_time, update_time, name)
+values (1, 0, current_timestamp, current_timestamp, 'Spring');
+
+insert into framework_or_library (id, version, creation_time, update_time, name)
+values (2, 0, current_timestamp, current_timestamp, 'Hibernate');
+
+insert into framework_or_library (id, version, creation_time, update_time, name)
+values (3, 0, current_timestamp, current_timestamp, 'Tomcat');
+
+insert into framework_or_library (id, version, creation_time, update_time, name)
+values (4, 0, current_timestamp, current_timestamp, 'JUnit');
+
+insert into framework_or_library (id, version, creation_time, update_time, name)
+values (5, 0, current_timestamp, current_timestamp, 'Mockito');
+
+insert into framework_or_library (id, version, creation_time, update_time, name)
+values (6, 0, current_timestamp, current_timestamp, 'React');
+
+insert into framework_or_library (id, version, creation_time, update_time, name)
+values (7, 0, current_timestamp, current_timestamp, 'Bootstrap');
+
+insert into framework_or_library (id, version, creation_time, update_time, name)
+values (8, 0, current_timestamp, current_timestamp, 'JQuery');
 
 insert into profile (id, version, creation_time, update_time, identity_id, role_id, summary_id, industry_id)
 values ( 1, 0, current_timestamp, current_timestamp, 1, 2, 1, 1);
 
 insert into profile (id, version, creation_time, update_time, identity_id, role_id, summary_id, industry_id)
 values ( 2, 0, current_timestamp, current_timestamp, 3, 1, 1, 1);
+
+insert into profile_framework_or_library (profile_id, framework_or_library_id)
+values (1, 1);
+
+insert into profile_framework_or_library (profile_id, framework_or_library_id)
+values (1, 2);
+
+insert into profile_framework_or_library (profile_id, framework_or_library_id)
+values (1, 3);
+
+insert into profile_framework_or_library (profile_id, framework_or_library_id)
+values (1, 4);
+
+insert into profile_framework_or_library (profile_id, framework_or_library_id)
+values (1, 5);
+
+insert into profile_framework_or_library (profile_id, framework_or_library_id)
+values (1, 6);
+
+insert into profile_framework_or_library (profile_id, framework_or_library_id)
+values (1, 7);
+
+insert into profile_framework_or_library (profile_id, framework_or_library_id)
+values (1, 8);
 
 
 insert into education (id, version, creation_time, update_time, institution, course, start_date, end_date, num, address, parish, town_city, county, state_province,

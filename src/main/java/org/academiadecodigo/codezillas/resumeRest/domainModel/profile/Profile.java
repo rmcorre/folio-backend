@@ -3,15 +3,17 @@ package org.academiadecodigo.codezillas.resumeRest.domainModel.profile;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import org.academiadecodigo.codezillas.resumeRest.domainModel.AbstractModel;
+import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.frameworkOrLibrary.FrameworkOrLibrary;
 import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.identity.Identity;
 import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.industry.Industry;
 import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.role.Role;
 import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.summary.Summary;
+import org.hibernate.annotations.SortNatural;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.util.Objects;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 @Entity
 @JsonIdentityInfo(generator = ObjectIdGenerators.UUIDGenerator.class)
@@ -45,6 +47,17 @@ public class Profile extends AbstractModel {
     )
     private Industry industry;
 
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+    @JoinTable(name = "profile_frameworkOrLibrary",
+            joinColumns = @JoinColumn(name = "profile_id"),
+            inverseJoinColumns = @JoinColumn(name = "frameworkOrLibrary_id")
+    )
+    @SortNatural
+    private final SortedSet<FrameworkOrLibrary> frameworkOrLibrarySortedSet = new TreeSet<>();
+
     public Identity getIdentity() {
         return identity;
     }
@@ -75,6 +88,33 @@ public class Profile extends AbstractModel {
 
     public void setIndustry(Industry industry) {
         this.industry = industry;
+    }
+
+    public SortedSet<FrameworkOrLibrary> getFrameworkOrLibrarySortedSet() {
+        return frameworkOrLibrarySortedSet;
+    }
+
+    public void addFrameworkOrLibrary(FrameworkOrLibrary frameworkOrLibrary) {
+        frameworkOrLibrarySortedSet.add(frameworkOrLibrary);
+        frameworkOrLibrary.getProfileSet().add(this);
+    }
+
+    public void removeFrameworkOrLibrary(FrameworkOrLibrary frameworkOrLibrary) {
+        frameworkOrLibrarySortedSet.remove(frameworkOrLibrary);
+        frameworkOrLibrary.getProfileSet().remove(this);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Profile)) return false;
+        Profile profile = (Profile) o;
+        return getIdentity().equals(profile.getIdentity());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdentity());
     }
 
     @Override
