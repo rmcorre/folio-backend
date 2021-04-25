@@ -1,6 +1,6 @@
 package org.academiadecodigo.codezillas.resumeRest.service.profile.industry;
 
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.industry.Industry;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.industry.Industry;
 import org.academiadecodigo.codezillas.resumeRest.repository.profile.IndustryJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
 package org.academiadecodigo.codezillas.resumeRest.service.profile.name;
 
 import org.academiadecodigo.codezillas.resumeRest.repository.profile.NameJpaRepository;
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.identity.name.Name;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.name.Name;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

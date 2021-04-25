@@ -1,6 +1,6 @@
 package org.academiadecodigo.codezillas.resumeRest.service.profile.role;
 
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.role.Role;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.role.Role;
 import org.academiadecodigo.codezillas.resumeRest.repository.profile.RoleJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

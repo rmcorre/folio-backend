@@ -1,6 +1,6 @@
 package org.academiadecodigo.codezillas.resumeRest.rest.controller.profile;
 
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.Profile;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.Profile;
 import org.academiadecodigo.codezillas.resumeRest.service.profile.ProfileSvc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

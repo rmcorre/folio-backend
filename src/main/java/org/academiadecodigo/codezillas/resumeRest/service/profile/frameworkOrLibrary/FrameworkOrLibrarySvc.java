@@ -1,6 +1,6 @@
 package org.academiadecodigo.codezillas.resumeRest.service.profile.frameworkOrLibrary;
 
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.frameworkOrLibrary.FrameworkOrLibrary;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.frameworkOrLibrary.FrameworkOrLibrary;
 
 import java.util.Set;
 

@@ -1,6 +1,6 @@
 package org.academiadecodigo.codezillas.resumeRest.rest.controller.profile;
 
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.identity.Identity;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.Identity;
 import org.academiadecodigo.codezillas.resumeRest.service.profile.identity.IdentitySvc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -34,10 +34,10 @@ public class IdentityRestCtrl {
 
 //
 //    @GetMapping("/create")
-//    public String createForm(Model domainModel) {
+//    public String createForm(Model domain) {
 //
 //        Identity identity = new Identity();
-//        domainModel.addAttribute("identity", identity);
+//        domain.addAttribute("identity", identity);
 //
 //        return "identity/create";
 //    }

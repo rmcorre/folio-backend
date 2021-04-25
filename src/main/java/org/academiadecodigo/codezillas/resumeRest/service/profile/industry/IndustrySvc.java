@@ -1,6 +1,6 @@
 package org.academiadecodigo.codezillas.resumeRest.service.profile.industry;
 
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.industry.Industry;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.industry.Industry;
 
 import java.util.List;
 
