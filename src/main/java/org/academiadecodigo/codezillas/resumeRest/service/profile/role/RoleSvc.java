@@ -1,6 +1,6 @@
 package org.academiadecodigo.codezillas.resumeRest.service.profile.role;
 
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.role.Role;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.role.Role;
 
 import java.util.Set;
 

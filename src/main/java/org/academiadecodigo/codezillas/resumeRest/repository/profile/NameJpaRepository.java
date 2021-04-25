@@ -1,6 +1,6 @@
 package org.academiadecodigo.codezillas.resumeRest.repository.profile;
 
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.identity.name.Name;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.name.Name;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

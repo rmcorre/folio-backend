@@ -1,6 +1,6 @@
 package org.academiadecodigo.codezillas.resumeRest.service.profile.frameworkOrLibrary;
 
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.frameworkOrLibrary.FrameworkOrLibrary;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.frameworkOrLibrary.FrameworkOrLibrary;
 import org.academiadecodigo.codezillas.resumeRest.repository.profile.FrameworkOrLibraryJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

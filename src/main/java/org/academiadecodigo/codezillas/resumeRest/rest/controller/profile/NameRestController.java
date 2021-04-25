@@ -1,7 +1,7 @@
 package org.academiadecodigo.codezillas.resumeRest.rest.controller.profile;
 
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.identity.Identity;
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.identity.name.Name;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.Identity;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.name.Name;
 import org.academiadecodigo.codezillas.resumeRest.rest.controller.profile.exeption.NameNotFoundException;
 import org.academiadecodigo.codezillas.resumeRest.service.profile.name.NameSvc;
 import org.springframework.beans.factory.annotation.Autowired;

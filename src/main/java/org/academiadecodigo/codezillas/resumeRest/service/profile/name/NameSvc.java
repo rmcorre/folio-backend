@@ -1,6 +1,6 @@
 package org.academiadecodigo.codezillas.resumeRest.service.profile.name;
 
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.identity.name.Name;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.name.Name;
 
 import java.util.Set;
 

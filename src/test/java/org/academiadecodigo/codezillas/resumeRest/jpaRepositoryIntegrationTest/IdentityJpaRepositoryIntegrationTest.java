@@ -1,8 +1,8 @@
 package org.academiadecodigo.codezillas.resumeRest.jpaRepositoryIntegrationTest;
 
 import org.academiadecodigo.codezillas.resumeRest.repository.profile.IdentityJpaRepository;
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.identity.Identity;
-import org.academiadecodigo.codezillas.resumeRest.domainModel.profile.identity.name.Name;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.Identity;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.name.Name;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
