@@ -45,15 +45,6 @@ public class EducationGroup extends AbstractModel {
         return educationSet;
     }
 
-    public void addEducation(Education education) {
-        educationSet.add(education);
-        education.getEducationGroupSet().add(this);
-    }
-
-    public void removeEducation(Education education) {
-        educationSet.remove(education);
-        education.getEducationGroupSet().remove(this);
-    }
 
     //    public void addPortfolio(Portfolio portfolio) {
 //        this.portfolioList.add(portfolio);
