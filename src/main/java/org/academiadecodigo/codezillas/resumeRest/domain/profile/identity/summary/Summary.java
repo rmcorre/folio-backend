@@ -1,4 +1,4 @@
-package org.academiadecodigo.codezillas.resumeRest.domain.profile.summary;
+package org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.summary;
 
 import org.academiadecodigo.codezillas.resumeRest.domain.AbstractModel;
 
@@ -11,7 +11,6 @@ public class Summary extends AbstractModel {
 
     @Column(length = 350)
     private String summary;
-    private Boolean active;
 
     public String getSummary() {
         return summary;
@@ -21,32 +20,23 @@ public class Summary extends AbstractModel {
         this.summary = summary;
     }
 
-    public Boolean getActive() {
-        return active;
-    }
-
-    public void setActive(Boolean active) {
-        this.active = active;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Summary summary1 = (Summary) o;
-        return Objects.equals(summary, summary1.summary) && Objects.equals(active, summary1.active);
+        return Objects.equals(summary, summary1.summary);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(summary, active);
+        return Objects.hash(summary);
     }
 
     @Override
     public String toString() {
         return "Summary{" +
                 "summary='" + summary + '\'' +
-                ", active=" + active +
                 "} " + super.toString();
     }
 }
