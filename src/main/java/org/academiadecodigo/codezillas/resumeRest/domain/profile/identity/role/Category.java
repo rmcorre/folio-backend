@@ -1,4 +1,4 @@
-package org.academiadecodigo.codezillas.resumeRest.domain.profile.role;
+package org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.role;
 
 import org.academiadecodigo.codezillas.resumeRest.domain.AbstractModel;
 
