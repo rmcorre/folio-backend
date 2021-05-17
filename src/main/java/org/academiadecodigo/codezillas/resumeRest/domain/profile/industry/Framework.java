@@ -1,4 +1,4 @@
-package org.academiadecodigo.codezillas.resumeRest.domain.profile.frameworkOrLibrary;
+package org.academiadecodigo.codezillas.resumeRest.domain.profile.framework;
 
 import org.academiadecodigo.codezillas.resumeRest.domain.AbstractModel;
 import org.academiadecodigo.codezillas.resumeRest.domain.profile.Profile;
@@ -11,14 +11,18 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-public class FrameworkOrLibrary extends AbstractModel implements Comparable<FrameworkOrLibrary> {
+public class Framework extends AbstractModel implements Comparable<Framework> {
 
     @NaturalId
     private String name;
 
-    @ManyToMany(mappedBy = "frameworkOrLibrarySortedSet")
+    @ManyToMany(mappedBy = "frameworks")
     private Set<Profile> profileSet = new HashSet<>();
 
+    @Override
+    public int compareTo(Framework o) {
+        return Integer.compare(super.getId(), o.getId());
+    }
 
     public String getName() {
         return name;
@@ -37,15 +41,10 @@ public class FrameworkOrLibrary extends AbstractModel implements Comparable<Fram
     }
 
     @Override
-    public int compareTo(FrameworkOrLibrary o) {
-        return Integer.compare(super.getId(), o.getId());
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof FrameworkOrLibrary)) return false;
-        FrameworkOrLibrary that = (FrameworkOrLibrary) o;
+        if (!(o instanceof Framework)) return false;
+        Framework that = (Framework) o;
         return getName().equals(that.getName());
     }
 
@@ -56,7 +55,7 @@ public class FrameworkOrLibrary extends AbstractModel implements Comparable<Fram
 
     @Override
     public String toString() {
-        return "FrameworkOrLibrary{" +
+        return "Framework{" +
                 "name='" + name + '\'' +
                 ", profileSet=" + profileSet +
                 "} " + super.toString();
