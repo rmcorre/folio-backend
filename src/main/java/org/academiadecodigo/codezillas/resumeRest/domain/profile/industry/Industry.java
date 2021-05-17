@@ -17,7 +17,7 @@ public class Industry extends AbstractModel {
             orphanRemoval = true
     )
     @JoinColumn(name = "industry_id")
-    List<Concept> conceptList = new ArrayList<>();
+    List<Concept> concepts = new ArrayList<>();
 
     @OneToMany(
             fetch = FetchType.LAZY,
@@ -25,7 +25,7 @@ public class Industry extends AbstractModel {
             orphanRemoval = true
     )
     @JoinColumn(name = "industry_id")
-    List<Tech> techList = new ArrayList<>();
+    List<Tech> techs = new ArrayList<>();
 
     @OneToMany(
             fetch = FetchType.LAZY,
@@ -33,7 +33,7 @@ public class Industry extends AbstractModel {
             orphanRemoval = true
     )
     @JoinColumn(name = "industry_id")
-    List<Tool> toolList = new ArrayList<>();
+    List<Tool> tools = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -43,37 +43,37 @@ public class Industry extends AbstractModel {
         this.name = name;
     }
 
-    public List<Concept> getConceptList() {
-        return conceptList;
+    public List<Concept> getConcepts() {
+        return concepts;
     }
 
-    public void setConceptList(List<Concept> conceptList) {
-        this.conceptList = conceptList;
+    public void setConcepts(List<Concept> conceptList) {
+        this.concepts = conceptList;
     }
 
-    public List<Tech> getTechList() {
-        return techList;
+    public List<Tech> getTechs() {
+        return techs;
     }
 
-    public void setTechList(List<Tech> techList) {
-        this.techList = techList;
+    public void setTechs(List<Tech> techList) {
+        this.techs = techList;
     }
 
-    public List<Tool> getToolList() {
-        return toolList;
+    public List<Tool> getTools() {
+        return tools;
     }
 
-    public void setToolList(List<Tool> toolList) {
-        this.toolList = toolList;
+    public void setTools(List<Tool> toolList) {
+        this.tools = toolList;
     }
 
     @Override
     public String toString() {
         return "Industry{" +
                 "name='" + name + '\'' +
-                ", conceptList=" + conceptList +
-                ", techList=" + techList +
-                ", toolList=" + toolList +
+                ", conceptList=" + concepts +
+                ", techList=" + techs +
+                ", toolList=" + tools +
                 "} " + super.toString();
     }
 }
