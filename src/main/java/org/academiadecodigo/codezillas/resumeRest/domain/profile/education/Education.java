@@ -1,10 +1,9 @@
 package org.academiadecodigo.codezillas.resumeRest.domain.profile.education;
 
 import org.academiadecodigo.codezillas.resumeRest.domain.AbstractModel;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.Profile;
 
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -20,8 +19,8 @@ public class Education extends AbstractModel {
     @Embedded
     private EducationAddress educationAddress;
 
-    @ManyToMany(mappedBy = "educationSet")
-    private Set<EducationGroup> educationGroupSet = new HashSet<>();
+    @ManyToMany(mappedBy = "educations")
+    private Set<Profile> profileSet = new HashSet<>();
 
     public String getInstitution() {
         return institution;
@@ -63,25 +62,25 @@ public class Education extends AbstractModel {
         this.educationAddress = educationAddress;
     }
 
-    public Set<EducationGroup> getEducationGroupSet() {
-        return educationGroupSet;
+    public Set<Profile> getProfileSet() {
+        return profileSet;
     }
 
-    public void setEducationGroupSet(Set<EducationGroup> educationGroupSet) {
-        this.educationGroupSet = educationGroupSet;
+    public void setProfileSet(Set<Profile> profileSet) {
+        this.profileSet = profileSet;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Education)) return false;
         Education education = (Education) o;
-        return Objects.equals(institution, education.institution) && Objects.equals(course, education.course);
+        return getInstitution().equals(education.getInstitution());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(institution, course);
+        return Objects.hash(getInstitution());
     }
 
     @Override
@@ -92,6 +91,7 @@ public class Education extends AbstractModel {
                 ", startDate='" + startDate + '\'' +
                 ", endDate='" + endDate + '\'' +
                 ", educationAddress=" + educationAddress +
+                ", profileSet=" + profileSet +
                 "} " + super.toString();
     }
 }
