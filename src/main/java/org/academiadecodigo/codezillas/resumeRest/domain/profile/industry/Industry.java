@@ -33,6 +33,14 @@ public class Industry extends AbstractModel {
             orphanRemoval = true
     )
     @JoinColumn(name = "industry_id")
+    List<Framework> frameworks = new ArrayList<>();
+
+    @OneToMany(
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    @JoinColumn(name = "industry_id")
     List<Tool> tools = new ArrayList<>();
 
     public String getName() {
@@ -57,6 +65,14 @@ public class Industry extends AbstractModel {
 
     public void setTechs(List<Tech> techList) {
         this.techs = techList;
+    }
+
+    public List<Framework> getFrameworks() {
+        return frameworks;
+    }
+
+    public void setFrameworks(List<Framework> frameworks) {
+        this.frameworks = frameworks;
     }
 
     public List<Tool> getTools() {
