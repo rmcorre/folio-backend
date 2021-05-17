@@ -4,6 +4,7 @@ import org.academiadecodigo.codezillas.resumeRest.domain.AbstractModel;
 import org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.contact.Contact;
 import org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.name.Name;
 import org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.summary.Summary;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.role.Role;
 
 import javax.persistence.*;
 
@@ -16,6 +17,13 @@ public class Identity extends AbstractModel {
             cascade = CascadeType.ALL
     )
     private Name name;
+
+    @ManyToOne(
+            optional = false,
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL
+    )
+    private Role role;
 
     @ManyToOne(
             optional = false,
@@ -39,6 +47,14 @@ public class Identity extends AbstractModel {
         this.name = name;
     }
 
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
     public Contact getContact() {
         return contact;
     }
@@ -59,6 +75,7 @@ public class Identity extends AbstractModel {
     public String toString() {
         return "Identity{" +
                 "name=" + name +
+                ", role=" + role +
                 ", contact=" + contact +
                 ", summary=" + summary +
                 "} " + super.toString();

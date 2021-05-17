@@ -53,15 +53,6 @@ values ( 1, 0, current_timestamp, current_timestamp, 'I''m a Canadian expat with
 insert into summary (id, version, creation_time, update_time, summary)
 values ( 2, 0, current_timestamp, current_timestamp, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.');
 
-insert into identity (id, version, creation_time, update_time, name_id, contact_id, summary_id)
-values (1, 0, current_timestamp, current_timestamp, 1, 1, 1);
-
-insert into identity (id, version, creation_time, update_time, name_id, contact_id, summary_id)
-values (2, 0, current_timestamp, current_timestamp, 2, 2, 1);
-
-insert into identity (id, version, creation_time, update_time, name_id, contact_id, summary_id)
-values (3, 0, current_timestamp, current_timestamp, 4, 1, 1);
-
 insert into level (id, version, creation_time, update_time, level_name)
 values (1, 0, current_timestamp, current_timestamp, 'Senior');
 
@@ -113,83 +104,92 @@ values (1, 0, current_timestamp, current_timestamp, 3, 1, 1);
 insert into role (id, version, creation_time, update_time, level_id, category_id, sub_category_id)
 values (2, 0, current_timestamp, current_timestamp, 3, 1, 3);
 
+insert into identity (id, version, creation_time, update_time, name_id, role_id, contact_id, summary_id)
+values (1, 0, current_timestamp, current_timestamp, 1, 2, 1, 1);
+
+insert into identity (id, version, creation_time, update_time, name_id, role_id, contact_id, summary_id)
+values (2, 0, current_timestamp, current_timestamp, 2, 1, 2, 1);
+
+insert into identity (id, version, creation_time, update_time, name_id, role_id, contact_id, summary_id)
+values (3, 0, current_timestamp, current_timestamp, 4, 1, 1, 1);
+
 insert into industry (id, version, creation_time, update_time, name)
 values (1, 0, current_timestamp, current_timestamp, 'Software Development');
 
-insert into concept (id, version, creation_time, update_time, concept_name, industry_id)
+insert into concept (id, version, creation_time, update_time, concept, industry_id)
 values (1, 0, current_timestamp, current_timestamp, 'OOP', 1);
 
-insert into concept (id, version, creation_time, update_time, concept_name, industry_id)
+insert into concept (id, version, creation_time, update_time, concept, industry_id)
 values (2, 0, current_timestamp, current_timestamp, 'Modeling', 1);
 
-insert into concept (id, version, creation_time, update_time, concept_name, industry_id)
+insert into concept (id, version, creation_time, update_time, concept, industry_id)
 values (3, 0, current_timestamp, current_timestamp, 'RDBMS', 1);
 
-insert into concept (id, version, creation_time, update_time, concept_name, industry_id)
+insert into concept (id, version, creation_time, update_time, concept, industry_id)
 values (4, 0, current_timestamp, current_timestamp, 'Patterns', 1);
 
-insert into concept (id, version, creation_time, update_time, concept_name, industry_id)
+insert into concept (id, version, creation_time, update_time, concept, industry_id)
 values (5, 0, current_timestamp, current_timestamp, 'REST', 1);
 
-insert into concept (id, version, creation_time, update_time, concept_name, industry_id)
+insert into concept (id, version, creation_time, update_time, concept, industry_id)
 values (6, 0, current_timestamp, current_timestamp, 'Architecture', 1);
 
-insert into tool (id, version, creation_time, update_time, tool_name, industry_id)
+insert into tool (id, version, creation_time, update_time, tool, industry_id)
 values (1, 0, current_timestamp, current_timestamp, 'Git', 1);
 
-insert into tool (id, version, creation_time, update_time, tool_name, industry_id)
+insert into tool (id, version, creation_time, update_time, tool, industry_id)
 values (2, 0, current_timestamp, current_timestamp, 'Webpack', 1);
 
-insert into tool (id, version, creation_time, update_time, tool_name, industry_id)
+insert into tool (id, version, creation_time, update_time, tool, industry_id)
 values (3, 0, current_timestamp, current_timestamp, 'NPM', 1);
 
-insert into tool (id, version, creation_time, update_time, tool_name, industry_id)
+insert into tool (id, version, creation_time, update_time, tool, industry_id)
 values (4, 0, current_timestamp, current_timestamp, 'IntelliJ', 1);
 
-insert into tool (id, version, creation_time, update_time, tool_name, industry_id)
+insert into tool (id, version, creation_time, update_time, tool, industry_id)
 values (5, 0, current_timestamp, current_timestamp, 'VSCode', 1);
 
-insert into tool (id, version, creation_time, update_time, tool_name, industry_id)
+insert into tool (id, version, creation_time, update_time, tool, industry_id)
 values (6, 0, current_timestamp, current_timestamp, 'Chrome', 1);
 
-insert into tech (id, version, creation_time, update_time, tech_name, industry_id)
+insert into tech (id, version, creation_time, update_time, tech, industry_id)
 values (1, 0, current_timestamp, current_timestamp, 'Java', 1);
 
-insert into tech (id, version, creation_time, update_time, tech_name, industry_id)
+insert into tech (id, version, creation_time, update_time, tech, industry_id)
 values (2, 0, current_timestamp, current_timestamp, 'JavaScript', 1);
 
-insert into tech (id, version, creation_time, update_time, tech_name, industry_id)
+insert into tech (id, version, creation_time, update_time, tech, industry_id)
 values (3, 0, current_timestamp, current_timestamp, 'HTML5', 1);
 
-insert into tech (id, version, creation_time, update_time, tech_name, industry_id)
+insert into tech (id, version, creation_time, update_time, tech, industry_id)
 values (4, 0, current_timestamp, current_timestamp, 'CSS3', 1);
 
-insert into tech (id, version, creation_time, update_time, tech_name, industry_id)
+insert into tech (id, version, creation_time, update_time, tech, industry_id)
 values (5, 0, current_timestamp, current_timestamp, 'SQL', 1);
 
-insert into framework_or_library (id, version, creation_time, update_time, name)
-values (1, 0, current_timestamp, current_timestamp, 'Spring');
+insert into framework (id, version, creation_time, update_time, framework, industry_id)
+values (1, 0, current_timestamp, current_timestamp, 'Spring', 1);
 
-insert into framework_or_library (id, version, creation_time, update_time, name)
-values (2, 0, current_timestamp, current_timestamp, 'Hibernate');
+insert into framework (id, version, creation_time, update_time, framework, industry_id)
+values (2, 0, current_timestamp, current_timestamp, 'Hibernate', 1);
 
-insert into framework_or_library (id, version, creation_time, update_time, name)
-values (3, 0, current_timestamp, current_timestamp, 'Tomcat');
+insert into framework (id, version, creation_time, update_time, framework, industry_id)
+values (3, 0, current_timestamp, current_timestamp, 'Tomcat', 1);
 
-insert into framework_or_library (id, version, creation_time, update_time, name)
-values (4, 0, current_timestamp, current_timestamp, 'JUnit');
+insert into framework (id, version, creation_time, update_time, framework, industry_id)
+values (4, 0, current_timestamp, current_timestamp, 'JUnit', 1);
 
-insert into framework_or_library (id, version, creation_time, update_time, name)
-values (5, 0, current_timestamp, current_timestamp, 'Mockito');
+insert into framework (id, version, creation_time, update_time, framework, industry_id)
+values (5, 0, current_timestamp, current_timestamp, 'Mockito', 1);
 
-insert into framework_or_library (id, version, creation_time, update_time, name)
-values (6, 0, current_timestamp, current_timestamp, 'React');
+insert into framework (id, version, creation_time, update_time, framework, industry_id)
+values (6, 0, current_timestamp, current_timestamp, 'React', 1);
 
-insert into framework_or_library (id, version, creation_time, update_time, name)
-values (7, 0, current_timestamp, current_timestamp, 'Bootstrap');
+insert into framework (id, version, creation_time, update_time, framework, industry_id)
+values (7, 0, current_timestamp, current_timestamp, 'Bootstrap', 1);
 
-insert into framework_or_library (id, version, creation_time, update_time, name)
-values (8, 0, current_timestamp, current_timestamp, 'JQuery');
+insert into framework (id, version, creation_time, update_time, framework, industry_id)
+values (8, 0, current_timestamp, current_timestamp, 'JQuery', 1);
 
 
 insert into education (id, version, creation_time, update_time, institution, course, start_date, end_date, num, address, parish, town_city, county, state_province,
@@ -222,35 +222,11 @@ values (2, 0, current_timestamp, current_timestamp, 'Tesco', 2016, 2017, 'Custom
 -- insert into work_experience (id, version, creation_time, update_time, organization, start_date, end_date, job_role, summary, duties)
 -- values ();
 
-insert into profile (id, version, creation_time, update_time, identity_id, role_id, summary_id, industry_id)
-values ( 1, 0, current_timestamp, current_timestamp, 1, 2, 1, 1);
+insert into profile (id, version, creation_time, update_time, identity_id, industry_id)
+values ( 1, 0, current_timestamp, current_timestamp, 1, 1);
 
-insert into profile (id, version, creation_time, update_time, identity_id, role_id, summary_id, industry_id)
-values ( 2, 0, current_timestamp, current_timestamp, 3, 1, 1, 1);
-
-insert into profile_framework_or_library (profile_id, framework_or_library_id)
-values (1, 1);
-
-insert into profile_framework_or_library (profile_id, framework_or_library_id)
-values (1, 2);
-
-insert into profile_framework_or_library (profile_id, framework_or_library_id)
-values (1, 3);
-
-insert into profile_framework_or_library (profile_id, framework_or_library_id)
-values (1, 4);
-
-insert into profile_framework_or_library (profile_id, framework_or_library_id)
-values (1, 5);
-
-insert into profile_framework_or_library (profile_id, framework_or_library_id)
-values (1, 6);
-
-insert into profile_framework_or_library (profile_id, framework_or_library_id)
-values (1, 7);
-
-insert into profile_framework_or_library (profile_id, framework_or_library_id)
-values (1, 8);
+insert into profile (id, version, creation_time, update_time, identity_id, industry_id)
+values ( 2, 0, current_timestamp, current_timestamp, 3, 1);
 
 insert into profile_education (profile_id, education_id)
 values (1, 1);
