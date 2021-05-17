@@ -3,6 +3,7 @@ package org.academiadecodigo.codezillas.resumeRest.domain.profile.identity;
 import org.academiadecodigo.codezillas.resumeRest.domain.AbstractModel;
 import org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.contact.Contact;
 import org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.name.Name;
+import org.academiadecodigo.codezillas.resumeRest.domain.profile.identity.summary.Summary;
 
 import javax.persistence.*;
 
@@ -23,6 +24,13 @@ public class Identity extends AbstractModel {
     )
     private Contact contact;
 
+    @ManyToOne(
+            optional = false,
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL
+    )
+    private Summary summary;
+
     public Name getName() {
         return name;
     }
@@ -39,11 +47,20 @@ public class Identity extends AbstractModel {
         this.contact = contact;
     }
 
+    public Summary getSummary() {
+        return summary;
+    }
+
+    public void setSummary(Summary summary) {
+        this.summary = summary;
+    }
+
     @Override
     public String toString() {
         return "Identity{" +
                 "name=" + name +
                 ", contact=" + contact +
+                ", summary=" + summary +
                 "} " + super.toString();
     }
 }
