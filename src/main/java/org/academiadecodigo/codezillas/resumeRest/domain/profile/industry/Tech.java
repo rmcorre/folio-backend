@@ -3,24 +3,38 @@ package org.academiadecodigo.codezillas.resumeRest.domain.profile.industry;
 import org.academiadecodigo.codezillas.resumeRest.domain.AbstractModel;
 
 import javax.persistence.Entity;
+import java.util.Objects;
 
 @Entity
 public class Tech extends AbstractModel {
 
-    private String techName;
+    private String tech;
 
-    public String getTechName() {
-        return techName;
+    public String getTech() {
+        return tech;
     }
 
-    public void setTechName(String techName) {
-        this.techName = techName;
+    public void setTech(String tech) {
+        this.tech = tech;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Tech)) return false;
+        Tech tech1 = (Tech) o;
+        return getTech().equals(tech1.getTech());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getTech());
     }
 
     @Override
     public String toString() {
         return "Tech{" +
-                "techName='" + techName + '\'' +
+                "tech='" + tech + '\'' +
                 "} " + super.toString();
     }
 }
