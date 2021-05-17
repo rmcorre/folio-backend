@@ -1,4 +1,4 @@
-package org.academiadecodigo.codezillas.resumeRest.service.profile.frameworkOrLibrary;
+package org.academiadecodigo.codezillas.resumeRest.service.profile.framework;
 
 import org.academiadecodigo.codezillas.resumeRest.domain.profile.industry.Framework;
 
