@@ -49,7 +49,7 @@ public class Profile extends AbstractModel {
             joinColumns = @JoinColumn(name = "profile_id"),
             inverseJoinColumns = @JoinColumn(name = "workExperience_id")
     )
-    @OrderBy("endDate DESC")
+    @OrderBy("startDate DESC")
     private final Set<WorkExperience> experiences = new HashSet<>();
 
     @ManyToOne(
