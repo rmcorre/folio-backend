@@ -48,7 +48,7 @@ insert into contact (id, version, creation_time, update_time, address_id, email_
 values (2, 0, current_timestamp, current_timestamp, 2, 2, 1 );
 
 insert into summary (id, version, creation_time, update_time, summary)
-values ( 1, 0, current_timestamp, current_timestamp, 'I''m a Canadian expat with an adventurous spirit and a curiosity for the unknown. These two characteristics have always been strong motivators in my life and have led me to some awesome experiences. Now, prepared to embark on a new journey, I''m itching to begin my next great adventure.');
+values ( 1, 0, current_timestamp, current_timestamp, 'I''m a Canadian ex-pat with an adventurous spirit and a curiosity for the unknown. I love to learn. I also love problem-solving. I get immense satisfaction from both. Sometimes the process is simple. Other times it may take hours, days, weeks, or even years. A part of the satisfaction is from the learning along the way, and the other part is from successfully solving a problem. However, the greatest reward comes from not desisting in the face of difficulty and adversity.');
 
 insert into summary (id, version, creation_time, update_time, summary)
 values ( 2, 0, current_timestamp, current_timestamp, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate.');
@@ -117,22 +117,19 @@ insert into industry (id, version, creation_time, update_time, name)
 values (1, 0, current_timestamp, current_timestamp, 'Software Development');
 
 insert into concept (id, version, creation_time, update_time, concept, industry_id)
-values (1, 0, current_timestamp, current_timestamp, 'OOP', 1);
+values (1, 0, current_timestamp, current_timestamp, 'Object Oriented Programming', 1);
 
 insert into concept (id, version, creation_time, update_time, concept, industry_id)
-values (2, 0, current_timestamp, current_timestamp, 'Modeling', 1);
+values (2, 0, current_timestamp, current_timestamp, 'Domain Driven Design', 1);
 
 insert into concept (id, version, creation_time, update_time, concept, industry_id)
-values (3, 0, current_timestamp, current_timestamp, 'RDBMS', 1);
+values (3, 0, current_timestamp, current_timestamp, 'Data Modeling', 1);
 
 insert into concept (id, version, creation_time, update_time, concept, industry_id)
-values (4, 0, current_timestamp, current_timestamp, 'Patterns', 1);
+values (4, 0, current_timestamp, current_timestamp, 'Design Patterns', 1);
 
 insert into concept (id, version, creation_time, update_time, concept, industry_id)
-values (5, 0, current_timestamp, current_timestamp, 'REST', 1);
-
-insert into concept (id, version, creation_time, update_time, concept, industry_id)
-values (6, 0, current_timestamp, current_timestamp, 'Architecture', 1);
+values (5, 0, current_timestamp, current_timestamp, 'Architectural Patterns', 1);
 
 insert into tool (id, version, creation_time, update_time, tool, industry_id)
 values (1, 0, current_timestamp, current_timestamp, 'Git', 1);
@@ -150,7 +147,10 @@ insert into tool (id, version, creation_time, update_time, tool, industry_id)
 values (5, 0, current_timestamp, current_timestamp, 'VSCode', 1);
 
 insert into tool (id, version, creation_time, update_time, tool, industry_id)
-values (6, 0, current_timestamp, current_timestamp, 'Chrome', 1);
+values (6, 0, current_timestamp, current_timestamp, 'Chrome Dev Tools', 1);
+
+insert into tool (id, version, creation_time, update_time, tool, industry_id)
+values (7, 0, current_timestamp, current_timestamp, 'Inkscape', 1);
 
 insert into tech (id, version, creation_time, update_time, tech, industry_id)
 values (1, 0, current_timestamp, current_timestamp, 'Java', 1);
@@ -168,28 +168,43 @@ insert into tech (id, version, creation_time, update_time, tech, industry_id)
 values (5, 0, current_timestamp, current_timestamp, 'SQL', 1);
 
 insert into framework (id, version, creation_time, update_time, framework, industry_id)
-values (1, 0, current_timestamp, current_timestamp, 'Spring', 1);
+values (1, 0, current_timestamp, current_timestamp, 'React', 1);
 
 insert into framework (id, version, creation_time, update_time, framework, industry_id)
-values (2, 0, current_timestamp, current_timestamp, 'Hibernate', 1);
+values (2, 0, current_timestamp, current_timestamp, 'Auth0', 1);
 
 insert into framework (id, version, creation_time, update_time, framework, industry_id)
-values (3, 0, current_timestamp, current_timestamp, 'Tomcat', 1);
+values (3, 0, current_timestamp, current_timestamp, 'Bootstrap', 1);
 
 insert into framework (id, version, creation_time, update_time, framework, industry_id)
-values (4, 0, current_timestamp, current_timestamp, 'JUnit', 1);
+values (4, 0, current_timestamp, current_timestamp, 'Spring', 1);
 
 insert into framework (id, version, creation_time, update_time, framework, industry_id)
-values (5, 0, current_timestamp, current_timestamp, 'Mockito', 1);
+values (5, 0, current_timestamp, current_timestamp, 'SpringBoot', 1);
 
 insert into framework (id, version, creation_time, update_time, framework, industry_id)
-values (6, 0, current_timestamp, current_timestamp, 'React', 1);
+values (6, 0, current_timestamp, current_timestamp, 'JPA', 1);
 
 insert into framework (id, version, creation_time, update_time, framework, industry_id)
-values (7, 0, current_timestamp, current_timestamp, 'Bootstrap', 1);
+values (7, 0, current_timestamp, current_timestamp, 'Hibernate', 1);
 
 insert into framework (id, version, creation_time, update_time, framework, industry_id)
-values (8, 0, current_timestamp, current_timestamp, 'JQuery', 1);
+values (8, 0, current_timestamp, current_timestamp, 'JSP', 1);
+
+insert into framework (id, version, creation_time, update_time, framework, industry_id)
+values (9, 0, current_timestamp, current_timestamp, 'Thymeleaf', 1);
+
+insert into framework (id, version, creation_time, update_time, framework, industry_id)
+values (10, 0, current_timestamp, current_timestamp, 'Tomcat', 1);
+
+insert into framework (id, version, creation_time, update_time, framework, industry_id)
+values (11, 0, current_timestamp, current_timestamp, 'JUnit', 1);
+
+insert into framework (id, version, creation_time, update_time, framework, industry_id)
+values (12, 0, current_timestamp, current_timestamp, 'Mockito', 1);
+
+insert into framework (id, version, creation_time, update_time, framework, industry_id)
+values (13, 0, current_timestamp, current_timestamp, 'JQuery', 1);
 
 
 insert into education (id, version, creation_time, update_time, institution, course, start_date, end_date, num, address, parish, town_city, county, state_province,
@@ -204,23 +219,35 @@ insert into education (id, version, creation_time, update_time, institution, cou
                        island, country_region, postal_code)
 values (3, 0, current_timestamp, current_timestamp, 'FreeCodeCamp', 'Full Stack Web Development Certification', '2016', 'Ongoing', null, null, null, null, null, null, null, 'Online', null);
 
-insert into education (id, version, creation_time, update_time, institution, course, start_date, end_date, num, address, parish, town_city, county, state_province,
-                       island, country_region, postal_code)
-values (4, 0, current_timestamp, current_timestamp, 'Rede Valorizar', 'Curso ABC', '2015', '2016', null, null, null, null, null, null, 'Sao Miguel', 'Azores', null);
+insert into work_experience (id, version, creation_time, update_time, organization, location, start_date, end_date, job_role, summary, duties)
+values (1, 0, current_timestamp, current_timestamp, 'Kuehne + Nagel', 'Edmonton, Canada', 2013, 2014, 'Warehouse Transfer Fulfillment',
+        'Upon assignment to a mostly autonomous function in what had been a problematic area in the past, it was my goal to take ownership and establish effective strategies that met the requirements of a fast-paced and demanding environment. Shortly after, these efforts eliminated common errors, delays, and damages in shipments and regained client trust and satisfaction.',
+        '');
 
+insert into work_experience (id, version, creation_time, update_time, organization, location, start_date, end_date, job_role, summary, duties)
+values (2, 0, current_timestamp, current_timestamp, 'Tesco', 'Macclesfield, England',2016, 2017, 'Customer Assistant',
+        'My main objective was to build a friendly and attentive rapport with all shoppers in the fresh department while meeting or exceeding all tasks and targets set out by the company. During my time at Tesco, the department saw an increase in revenue and customer loyalty, with a notable reduction in negative comments and surveys.',
+        '');
 
-insert into work_experience (id, version, creation_time, update_time, organization, start_date, end_date, job_role, summary, duties)
-values (1, 0, current_timestamp, current_timestamp, 'Kuehne + Nagel', 2013, 2014, 'Warehouse Technician',
-        'Responsible for warehouse transfers to various Best Buy stores in the province of Alberta in addition to:',
-        'Preparing daily pick-slips for co-workers; Checking transfers to ensure accuracy; Meeting daily shipping schedules and requirements; Monitoring and organizing inventory for accuracy; Loading and unloading trailers and containers');
+insert into work_experience (id, version, creation_time, update_time, organization, location, start_date, end_date, job_role, summary, duties)
+values (3, 0, current_timestamp, current_timestamp, 'Napa Auto Parts', 'Edmonton, Canada', 2011, 2011, 'Head Shipper',
+        'After two weeks as a temporary warehouse labourer, I was hired full-time as the head shipper responsible for all branches in western Canada. My strong organizational and time-management skills were crucial in completing all shipments successfully within tight and often overlapping deadlines. ',
+        '');
 
-insert into work_experience (id, version, creation_time, update_time, organization, start_date, end_date, job_role, summary, duties)
-values (2, 0, current_timestamp, current_timestamp, 'Tesco', 2016, 2017, 'Customer Service Representative',
-        'Responsible for assisting customers in addition to:',
-        'Stocking, organizing, and labelling shelves; Checking product for expiration dates; Reducing prices on products due to expire; Checkout duties when required');
+insert into work_experience (id, version, creation_time, update_time, organization, location, start_date, end_date, job_role, summary, duties)
+values (4, 0, current_timestamp, current_timestamp, 'Sublime', 'Edmonton, Canada', 1997, 2003, 'Owner/CEO',
+        'Being one of the pioneering DJs of House music in Edmonton,  Sublime materialized from a long-time aspiration to establish an after-hours dance club devoted to House music and modelled after the famed Paradise Garage in New York City. Because of the novelty of the concept, resources were scarce and licensing was a challenge. Consequently, the conception and execution had to be singular to keep with the original tenets of the project. Eventually, Sublime became recognized among devotees and attendance grew exponentially. For three years consecutively, its dancefloor and capacity filled with revellers of the genre and culture. Ultimately, this pet project grew beyond my and anyone else''s expectations. It was a true pleasure to see it succeed and receive the honour of being the premier club devoted to House music in western Canada at that time.',
+        '');
 
--- insert into work_experience (id, version, creation_time, update_time, organization, start_date, end_date, job_role, summary, duties)
--- values ();
+insert into work_experience (id, version, creation_time, update_time, organization, location, start_date, end_date, job_role, summary, duties)
+values (5, 0, current_timestamp, current_timestamp, '106 Street Social Club', 'Edmonton, Canada', 1996, 2010, 'General Manager',
+        'Overseeing all operations and business activities of the club, I was responsible for developing new strategies that re-invigorated stagnant and outdated business practices and facilitated a much-needed face-lift. As a result, there was a steady increase in revenues and decrease in expenses while generating recognition as an award-winning establishment for 12 years consecutively.',
+        '');
+
+insert into work_experience (id, version, creation_time, update_time, organization, location, start_date, end_date, job_role, summary, duties)
+values (6, 0, current_timestamp, current_timestamp, 'Roost', 'Edmonton, Canada', 1991, 1995, 'Afternoon Manager',
+        'The Roost was my entry point into the Hospitality industry and introduced me to the basics of bar and restaurant operations. I quickly felt drawn to this field and set out to learn all that I could. My enthusiasm and passion resulted in a promotion to management, where I learned business administration, accounting principles, and leadership skills. These skills, along with creativity, proved valuable when leading a team to ward off a threat to the club''s stability from a new competitor. The short-term result was a gradual return of clientele while, in the long-term, the new format grew to be the club''s primary source of revenue for some time. ',
+        '');
 
 insert into profile (id, version, creation_time, update_time, identity_id, industry_id)
 values ( 1, 0, current_timestamp, current_timestamp, 1, 1);
@@ -237,14 +264,23 @@ values (1, 2);
 insert into profile_education (profile_id, education_id)
 values (1, 3);
 
-insert into profile_education (profile_id, education_id)
-values (1, 4);
-
 insert into profile_work_experience (profile_id, work_experience_id)
 values (1, 1);
 
 insert into profile_work_experience (profile_id, work_experience_id)
 values (1, 2);
+
+insert into profile_work_experience (profile_id, work_experience_id)
+values (1, 3);
+
+insert into profile_work_experience (profile_id, work_experience_id)
+values (1, 4);
+
+insert into profile_work_experience (profile_id, work_experience_id)
+values (1, 5);
+
+insert into profile_work_experience (profile_id, work_experience_id)
+values (1, 6);
 
 
 
