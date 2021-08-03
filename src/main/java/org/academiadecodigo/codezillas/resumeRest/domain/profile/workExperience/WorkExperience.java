@@ -3,6 +3,7 @@ package org.academiadecodigo.codezillas.resumeRest.domain.profile.workExperience
 import org.academiadecodigo.codezillas.resumeRest.domain.AbstractModel;
 import org.academiadecodigo.codezillas.resumeRest.domain.profile.Profile;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import java.util.Comparator;
@@ -14,9 +15,11 @@ import java.util.Set;
 public class WorkExperience extends AbstractModel {
 
     private String organization;
+    private String location;
     private String startDate;
     private String endDate;
     private String jobRole;
+    @Column(length=1000)
     private String summary;
     private String duties;
 
@@ -29,6 +32,14 @@ public class WorkExperience extends AbstractModel {
 
     public void setOrganization(String organization) {
         this.organization = organization;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public String getStartDate() {
