@@ -9,7 +9,7 @@ import java.util.Objects;
 @Entity
 public class Summary extends AbstractModel {
 
-    @Column(length = 350)
+    @Column(length = 1000)
     private String summary;
 
     public String getSummary() {
