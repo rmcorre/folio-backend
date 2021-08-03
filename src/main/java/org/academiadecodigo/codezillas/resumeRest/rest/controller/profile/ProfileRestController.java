@@ -18,7 +18,7 @@ public class ProfileRestController {
         this.profileSvc = profileSvc;
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+//    @CrossOrigin(origins = "https://localhost:3000")
     @GetMapping("/profiles")
     public Set<Profile> getProfiles() {
         return profileSvc.getProfiles();
